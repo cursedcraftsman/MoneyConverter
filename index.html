@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    body{
+        background-color: #fff; /* #B5C0D0*/
+        box-sizing: border-box;
+    }
+        .container{
+            height: 400px;
+            background-color:#7198d8;
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 20px;
+            overflow: hidden;
+        
+               
+        }
+        h1{
+            text-align: center;
+            color: red;
+        }
+        #rupeesLabel,
+        #rupees{
+            display: none;
+        }
+        form{
+            padding-left: 26%;
+            padding-top: 10%;
+            font-size: 1rem;
+            font-family: sans-serif;
+        }
+        input{
+            border-radius: 5px;
+            border: none;
+            height: 20px;
+            box-shadow: 5px 5px 5px;
+        
+        }
+        #btn{
+            padding: 5px;
+            width: 80px;
+            height: max-content;
+            border-radius: 5px;
+            margin: auto;
+            border: none;
+            background-color: red;
+            color: #fff;
+            cursor: pointer;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <h1>Money Converter</h1>
+    <div class="container">
+           <form>
+            <label>enter dollers:</label><br>
+            <input id="dollers" type="text"><br><br>
+            <label id="rupeesLabel">rupees:</label>
+            <input id="rupees" type="text"><br>
+            
+            <button id="btn" onclick="converter()">submit</button>
+           </form>
+        
+    </div>
+    <script>
+        function converter(){
+            event.preventDefault()
+            let val=document.getElementById("dollers").value
+            let res=val*83.2 
+            document.getElementById("rupees").value=res 
+            document.getElementById("rupeesLabel").style.display = "block"; 
+            document.getElementById("rupees").style.display = "block"; 
+        }
+    </script>
+</body>
+</html>
